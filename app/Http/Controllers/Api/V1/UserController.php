@@ -31,7 +31,8 @@ class UserController extends Controller
             'nome' => 'required',
             'email' => 'required|unique:users',
             'password' => 'required',
-            'usuario_que_cadastrou' => 'nullable|numeric',
+            'usuario_que_cadastrou' => 'required|numeric',
+            'admin' => 'required'
         ]);
 
         if($validator->fails()){
@@ -63,7 +64,8 @@ class UserController extends Controller
             'nome' => 'required',
             'email' => 'required|unique:users',
             'password' => 'required',
-            'usuario_que_cadastrou' => 'nullable|numeric',
+            'usuario_que_cadastrou' => 'required|numeric',
+            'admin' => 'required'
         ]);
 
         if($validator->fails()){
@@ -76,7 +78,8 @@ class UserController extends Controller
             'nome' => $validated['nome'],
             'email' => $validated['email'],
             'password' => $validated['password'],
-            'usuario_que_cadastrou' => $validated['nullable|numeric'],
+            'usuario_que_cadastrou' => $validated['usuario_que_cadastrou'],
+            'admin' => $validated['admin']
         ]);
 
         if($updated){

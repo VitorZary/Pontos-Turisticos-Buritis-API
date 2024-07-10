@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->unsignedBigInteger('usuario_que_cadastrou')->nullable();
+            $table->boolean('admin');
             $table->timestamps();
         });
     }

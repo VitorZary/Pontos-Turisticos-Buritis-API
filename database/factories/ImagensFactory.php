@@ -18,7 +18,7 @@ class ImagensFactory extends Factory
     public function definition(): array
     {
         return [
-            'imagem' => "posts/YHWTfB6GgnqzUxwdNmb5iS08gGbLr1pcCVLfVR5g.jpg",
+            'imagem' => "imagens/6MOAITTn71VfcI9ZHFJsNwDk8nBH7Bp8ip8WPKDT.jpg",
             'pontos_turisticos_id' => PontosTuristicos::all()->random()->id,
         ];
     }

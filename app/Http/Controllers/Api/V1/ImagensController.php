@@ -36,7 +36,7 @@ class ImagensController extends Controller
 
         $filename = '';
         if($request->hasFile('imagem')){
-            $filename = $request->file('imagem')->store('public');
+            $filename = $request->file('imagem')->store('imagens', 'public');
         }else{
             $filename = null;
         }
@@ -77,7 +77,7 @@ class ImagensController extends Controller
 
         $filename = '';
         if($request->hasFile('imagem')){
-            $filename = $request->file('imagem')->store('public');
+            $filename = $request->file('imagem')->store('imagens', 'public');
         }else{
             $filename = null;
         }

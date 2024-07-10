@@ -15,7 +15,7 @@ class PontosTuristicosController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth:sanctum')->only(['store', 'update', 'destroy']);
+        $this->middleware(['auth:sanctum', 'ability:user'])->only(['store', 'update', 'destroy']);
     }
 
     /**
@@ -31,7 +31,7 @@ class PontosTuristicosController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'titulo' => 'required',
+            'titulo' => 'required|unique:pontos_turisticos',
             'descricao' => 'required',
             'user_id' => 'required|numeric',
             'latitude' => 'required',

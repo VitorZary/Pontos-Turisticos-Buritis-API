@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('pontos_turisticos', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo', 255);
+            $table->string('titulo', 255)->unique();
             $table->longText('descricao');
             $table->decimal('latitude', $precision = 14, $scale = 8);
             $table->decimal('longitude', $precision = 14, $scale = 8);

@@ -18,7 +18,7 @@ class PontosTuristicosFactory extends Factory
     public function definition(): array
     {
         return [
-            'titulo' => fake()->company(),
+            'titulo' => fake()->unique()->company(),
             'descricao' => fake()->text(),
             'user_id' => User::all()->random()->id,
             'latitude' => -15.62631,

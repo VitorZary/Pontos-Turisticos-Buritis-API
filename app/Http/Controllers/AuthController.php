@@ -18,9 +18,10 @@ class AuthController extends Controller
             return $this->response('Authorized', 200, [
                 'id' => $request->user()->id,
                 'nome' => $request->user()->nome,
-                'token' => $request->user()->createToken('PontosTuristicos')->plainTextToken
+                'token' => $request->user()->admin == true ? $request->user()->createToken('admin', ['admin', 'user'])->plainTextToken : $request->user()->createToken('usuario', ['user'])->plainTextToken,
+                'admin' => $request->user()->admin
             ]);
-        }   
+        }
 
         return $this->response('Not Authorized', 403);
     }
