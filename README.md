@@ -19,7 +19,7 @@ Para instalar as dependências e rodar o projeto em sua máquina segue um passo 
 
 Necessário também instalar um banco de dados mysql.
 
-Depois dessa etapa de configuração inicial só basta rodar o comando `php artisan serve`. A porta padrão da api é http://localhost:8000/api/v1/.
+Depois dessa etapa de configuração inicial só basta rodar o comando `php artisan serve`. O domínio e porta padrão do laravel é http://localhost:8000
 
 Para visualizar a documentação Swagger da API basta só entrar no domínio http://localhost:8000/docs/api. Essa Rota mostra todas os endpoints disponíveis da API com suas peculiaridades.
 
